@@ -1,0 +1,43 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>AppName.Application</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AppName.Application</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="AppName.Application.csproj" File="AppName.Application.csproj" ReplaceParameters="true">
+      <Folder Name="Common" TargetFolderName="Common">
+        <Folder Name="Configuration" TargetFolderName="Configuration">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AzureBlobStorageSettings.cs">AzureBlobStorageSettings.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="AzureTableStorageSettings.cs">AzureTableStorageSettings.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Interfaces" TargetFolderName="Interfaces">
+          <ProjectItem ReplaceParameters="true" TargetFileName="IApplicationBlobStorage.cs">IApplicationBlobStorage.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="IApplicationTableStorage.cs">IApplicationTableStorage.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Models" TargetFolderName="Models" />
+      </Folder>
+      <Folder Name="Features" TargetFolderName="Features">
+        <Folder Name="Customer" TargetFolderName="Customer">
+          <Folder Name="Commands" TargetFolderName="Commands" />
+          <Folder Name="Handlers" TargetFolderName="Handlers">
+            <ProjectItem ReplaceParameters="true" TargetFileName="GetCustomerByCustomerIdQueryHandler.cs">GetCustomerByCustomerIdQueryHandler.cs</ProjectItem>
+          </Folder>
+          <Folder Name="Queries" TargetFolderName="Queries">
+            <ProjectItem ReplaceParameters="true" TargetFileName="GetCustomerByCustomerIdQuery.cs">GetCustomerByCustomerIdQuery.cs</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
