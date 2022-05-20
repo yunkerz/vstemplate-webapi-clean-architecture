@@ -1,0 +1,29 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>WebApi for .NET Core with Clean Architecture v0.8.6</Name>
+		<Description>Two solution folders (src and tests) plus the four projects.</Description>
+		<Icon>Icon.ico</Icon>
+		<ProjectType>CSharp</ProjectType>
+	</TemplateData>
+	
+	<TemplateContent>
+		<ProjectCollection>
+			<SolutionFolder Name="src">
+				<ProjectTemplateLink ProjectName="$safeprojectname$.Application" CopyParameters="true">
+					Application\MyTemplate.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$safeprojectname$.Domain" CopyParameters="true">
+					Domain\MyTemplate.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructure" CopyParameters="true">
+					Infrastructure\MyTemplate.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$safeprojectname$.WebApi" CopyParameters="true">
+					WebApi\MyTemplate.vstemplate
+				</ProjectTemplateLink>												
+			</SolutionFolder>
+			<SolutionFolder Name="tests">
+			</SolutionFolder>
+		</ProjectCollection>
+	</TemplateContent>
+</VSTemplate>
